@@ -17,18 +17,18 @@
     <meta name="description" content="maven生成war包的两种方式war包即对WEB应用程序进行打包，用于应用容器的部署。如在jboss中只要把war包丢入deploy目录下即可发布自己的应用了。打包方式有很多中，很多工具本身就支持此功能。下面主要介绍通过maven来操作的两种方式： 方法一： &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 即第一反应的那种啦，就是利用maven的maven-war-plugin。 &amp;nbsp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="maven生成war包的两种方式">
-<meta property="og:url" content="http://clockcoder.com/2020/04/29/maven%E7%94%9F%E6%88%90war%E5%8C%85%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/index.html">
+<meta property="og:url" content="http://clockcoder.top/2020/04/29/maven%E7%94%9F%E6%88%90war%E5%8C%85%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/index.html">
 <meta property="og:site_name" content="小黑的技术博客">
 <meta property="og:description" content="maven生成war包的两种方式war包即对WEB应用程序进行打包，用于应用容器的部署。如在jboss中只要把war包丢入deploy目录下即可发布自己的应用了。打包方式有很多中，很多工具本身就支持此功能。下面主要介绍通过maven来操作的两种方式： 方法一： &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 即第一反应的那种啦，就是利用maven的maven-war-plugin。 &amp;nbsp;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://clockcoder.com/maven%E7%94%9F%E6%88%90war%E5%8C%85%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F.resources/2407B8DD-E650-467A-B079-29A4A8E31840.png">
-<meta property="og:image" content="http://clockcoder.com/maven%E7%94%9F%E6%88%90war%E5%8C%85%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F.resources/2407B8DD-E650-467A-B079-29A4A8E31840.png">
+<meta property="og:image" content="http://clockcoder.top/maven%E7%94%9F%E6%88%90war%E5%8C%85%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F.resources/2407B8DD-E650-467A-B079-29A4A8E31840.png">
+<meta property="og:image" content="http://clockcoder.top/maven%E7%94%9F%E6%88%90war%E5%8C%85%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F.resources/2407B8DD-E650-467A-B079-29A4A8E31840.png">
 <meta property="article:published_time" content="2020-04-28T16:00:00.000Z">
 <meta property="article:modified_time" content="2023-02-16T11:41:07.679Z">
 <meta property="article:author" content="sam">
 <meta property="article:tag" content="从印象笔记导入">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://clockcoder.com/maven%E7%94%9F%E6%88%90war%E5%8C%85%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F.resources/2407B8DD-E650-467A-B079-29A4A8E31840.png">
+<meta name="twitter:image" content="http://clockcoder.top/maven%E7%94%9F%E6%88%90war%E5%8C%85%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F.resources/2407B8DD-E650-467A-B079-29A4A8E31840.png">
 <meta name="twitter:creator" content="@XiaoheiSpring">
 <link rel="publisher" href="109318125124422212783">
 
@@ -76,7 +76,7 @@
 					
 						<li><a href="/about">关于</a></li>
 					
-					<li><a href="http://clockcoder.com">副站</a></li>
+					<li><a target="_blank" rel="noopener" href="http://clockcoder.com">副站</a></li>
 					<li>
  					
 						<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
@@ -299,7 +299,7 @@ style=”color: black;”&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://clockcoder.com/2020/04/29/maven%E7%94%9F%E6%88%90war%E5%8C%85%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" data-title="maven生成war包的两种方式 | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
+	  <div data-url="http://clockcoder.top/2020/04/29/maven%E7%94%9F%E6%88%90war%E5%8C%85%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" data-title="maven生成war包的两种方式 | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -333,7 +333,7 @@ style=”color: black;”&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2020/04/29/maven生成war包的两种方式/" data-title="maven生成war包的两种方式" data-url="http://clockcoder.com/2020/04/29/maven%E7%94%9F%E6%88%90war%E5%8C%85%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/"></div>
+	<div class="ds-thread" data-thread-key="2020/04/29/maven生成war包的两种方式/" data-title="maven生成war包的两种方式" data-url="http://clockcoder.top/2020/04/29/maven%E7%94%9F%E6%88%90war%E5%8C%85%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/"></div>
 </section>
 
 

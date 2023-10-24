@@ -1,2 +1,2 @@
-Sitemap: http://clockcoder.com/sitemap.xml
-Sitemap: http://clockcoder.com/baidusitemap.xml
+Sitemap: http://clockcoder.top/sitemap.xml
+Sitemap: http://clockcoder.top/baidusitemap.xml

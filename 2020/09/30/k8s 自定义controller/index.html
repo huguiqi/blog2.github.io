@@ -17,23 +17,23 @@
     <meta name="description" content="k8s 自定义controllerCRD Controller的开发逻辑控制器的目的是让 CRD 定义的资源达到我们预期的一个状态，要达到我们定义的状态，我们需要监听触发事件。触发事件的概念是从硬件信号产生 中断 的机制衍生过来的，其产生一个电平信号时，有水平触发（包括高电平、低电平），也有边缘触发（包括上升沿、下降沿触发等）。  水平触发 : 系统仅依赖于当前状态。即使系统错过了某个事件（可能因">
 <meta property="og:type" content="article">
 <meta property="og:title" content="k8s 自定义controller">
-<meta property="og:url" content="http://clockcoder.com/2020/09/30/k8s%20%E8%87%AA%E5%AE%9A%E4%B9%89controller/index.html">
+<meta property="og:url" content="http://clockcoder.top/2020/09/30/k8s%20%E8%87%AA%E5%AE%9A%E4%B9%89controller/index.html">
 <meta property="og:site_name" content="小黑的技术博客">
 <meta property="og:description" content="k8s 自定义controllerCRD Controller的开发逻辑控制器的目的是让 CRD 定义的资源达到我们预期的一个状态，要达到我们定义的状态，我们需要监听触发事件。触发事件的概念是从硬件信号产生 中断 的机制衍生过来的，其产生一个电平信号时，有水平触发（包括高电平、低电平），也有边缘触发（包括上升沿、下降沿触发等）。  水平触发 : 系统仅依赖于当前状态。即使系统错过了某个事件（可能因">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190331114526283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly94aW5jaGVuLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="http://clockcoder.com/images/008eGmZEgy1gnsssp62aaj31lk0ha0wb.png">
-<meta property="og:image" content="http://clockcoder.com/images/008eGmZEgy1gnstbsivzwj314c05m0u1.png">
-<meta property="og:image" content="http://clockcoder.com/images/008eGmZEgy1gnsuof9cbaj312u0e0acg.png">
-<meta property="og:image" content="http://clockcoder.com/images/008eGmZEgy1gnsvsc03rhj313c066ta8.png">
-<meta property="og:image" content="http://clockcoder.com/images/008eGmZEgy1gnsvug14o7j314007qgn6.png">
-<meta property="og:image" content="http://clockcoder.com/images/008eGmZEgy1gnsxqgs7h7j31440a8jt2.png">
-<meta property="og:image" content="http://clockcoder.com/images/008eGmZEgy1gnszqmgrn6j31420bw770.png">
-<meta property="og:image" content="http://clockcoder.com/Users/sam/Public/nodeWorkspace/hexo/blogCode/postImg/008eGmZEgy1gnt026d90tj31200ekgnt.png">
-<meta property="og:image" content="http://clockcoder.com/images/008eGmZEgy1gnt077d5sqj312c0eaq5q.png">
-<meta property="og:image" content="http://clockcoder.com/images/008eGmZEgy1gnt09ium8kj30zk0dodik.png">
-<meta property="og:image" content="http://clockcoder.com/images/008eGmZEgy1gnt0al7t8yj30tg07iabc.png">
-<meta property="og:image" content="http://clockcoder.com/images/008eGmZEgy1gnt1aypgchj310k0duwhd.png">
+<meta property="og:image" content="http://clockcoder.top/images/008eGmZEgy1gnsssp62aaj31lk0ha0wb.png">
+<meta property="og:image" content="http://clockcoder.top/images/008eGmZEgy1gnstbsivzwj314c05m0u1.png">
+<meta property="og:image" content="http://clockcoder.top/images/008eGmZEgy1gnsuof9cbaj312u0e0acg.png">
+<meta property="og:image" content="http://clockcoder.top/images/008eGmZEgy1gnsvsc03rhj313c066ta8.png">
+<meta property="og:image" content="http://clockcoder.top/images/008eGmZEgy1gnsvug14o7j314007qgn6.png">
+<meta property="og:image" content="http://clockcoder.top/images/008eGmZEgy1gnsxqgs7h7j31440a8jt2.png">
+<meta property="og:image" content="http://clockcoder.top/images/008eGmZEgy1gnszqmgrn6j31420bw770.png">
+<meta property="og:image" content="http://clockcoder.top/Users/sam/Public/nodeWorkspace/hexo/blogCode/postImg/008eGmZEgy1gnt026d90tj31200ekgnt.png">
+<meta property="og:image" content="http://clockcoder.top/images/008eGmZEgy1gnt077d5sqj312c0eaq5q.png">
+<meta property="og:image" content="http://clockcoder.top/images/008eGmZEgy1gnt09ium8kj30zk0dodik.png">
+<meta property="og:image" content="http://clockcoder.top/images/008eGmZEgy1gnt0al7t8yj30tg07iabc.png">
+<meta property="og:image" content="http://clockcoder.top/images/008eGmZEgy1gnt1aypgchj310k0duwhd.png">
 <meta property="article:published_time" content="2020-09-30T07:37:00.000Z">
 <meta property="article:modified_time" content="2023-02-16T11:41:07.573Z">
 <meta property="article:author" content="sam">
@@ -88,7 +88,7 @@
 					
 						<li><a href="/about">关于</a></li>
 					
-					<li><a href="http://clockcoder.com">副站</a></li>
+					<li><a target="_blank" rel="noopener" href="http://clockcoder.com">副站</a></li>
 					<li>
  					
 						<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
@@ -263,7 +263,7 @@ export PATH=$PATH:/usr/local/kubebuilder/bin
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://clockcoder.com/2020/09/30/k8s%20%E8%87%AA%E5%AE%9A%E4%B9%89controller/" data-title="k8s 自定义controller | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
+	  <div data-url="http://clockcoder.top/2020/09/30/k8s%20%E8%87%AA%E5%AE%9A%E4%B9%89controller/" data-title="k8s 自定义controller | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -297,7 +297,7 @@ export PATH=$PATH:/usr/local/kubebuilder/bin
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2020/09/30/k8s 自定义controller/" data-title="k8s 自定义controller" data-url="http://clockcoder.com/2020/09/30/k8s%20%E8%87%AA%E5%AE%9A%E4%B9%89controller/"></div>
+	<div class="ds-thread" data-thread-key="2020/09/30/k8s 自定义controller/" data-title="k8s 自定义controller" data-url="http://clockcoder.top/2020/09/30/k8s%20%E8%87%AA%E5%AE%9A%E4%B9%89controller/"></div>
 </section>
 
 

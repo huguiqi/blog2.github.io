@@ -17,17 +17,17 @@
     <meta name="description" content="GCD（Grand Central Dispatch）和Block 使用-浅析GCD（Grand&amp;nbsp;Central&amp;nbsp;Dispatch）和Block&amp;nbsp;使用-浅析(2013-03-2721:25:59)  转载 ▼标签：gcdgcd浅析iosblockxcode分类：帮助文档正文开始\  关于GCD，我想我前面的有些博客已经介绍的很清楚了。我们就来谈一下它单纯的入门级别的应">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GCD（Grand Central Dispatch）和Block 使用-浅析">
-<meta property="og:url" content="http://clockcoder.com/2020/04/29/GCD%EF%BC%88Grand%20Central%20Dispatch%EF%BC%89%E5%92%8CBlock%20%E4%BD%BF%E7%94%A8-%E6%B5%85%E6%9E%90/index.html">
+<meta property="og:url" content="http://clockcoder.top/2020/04/29/GCD%EF%BC%88Grand%20Central%20Dispatch%EF%BC%89%E5%92%8CBlock%20%E4%BD%BF%E7%94%A8-%E6%B5%85%E6%9E%90/index.html">
 <meta property="og:site_name" content="小黑的技术博客">
 <meta property="og:description" content="GCD（Grand Central Dispatch）和Block 使用-浅析GCD（Grand&amp;nbsp;Central&amp;nbsp;Dispatch）和Block&amp;nbsp;使用-浅析(2013-03-2721:25:59)  转载 ▼标签：gcdgcd浅析iosblockxcode分类：帮助文档正文开始\  关于GCD，我想我前面的有些博客已经介绍的很清楚了。我们就来谈一下它单纯的入门级别的应">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://clockcoder.com/GCD%EF%BC%88Grand%20Central%20Dispatch%EF%BC%89%E5%92%8CBlock%20%E4%BD%BF%E7%94%A8-%E6%B5%85%E6%9E%90.resources/FE882AC2-384F-4A0B-B6B8-C1035FBA0CCB.gif">
+<meta property="og:image" content="http://clockcoder.top/GCD%EF%BC%88Grand%20Central%20Dispatch%EF%BC%89%E5%92%8CBlock%20%E4%BD%BF%E7%94%A8-%E6%B5%85%E6%9E%90.resources/FE882AC2-384F-4A0B-B6B8-C1035FBA0CCB.gif">
 <meta property="article:published_time" content="2020-04-28T16:00:00.000Z">
 <meta property="article:modified_time" content="2023-02-16T11:41:07.030Z">
 <meta property="article:author" content="sam">
 <meta property="article:tag" content="从印象笔记导入">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://clockcoder.com/GCD%EF%BC%88Grand%20Central%20Dispatch%EF%BC%89%E5%92%8CBlock%20%E4%BD%BF%E7%94%A8-%E6%B5%85%E6%9E%90.resources/FE882AC2-384F-4A0B-B6B8-C1035FBA0CCB.gif">
+<meta name="twitter:image" content="http://clockcoder.top/GCD%EF%BC%88Grand%20Central%20Dispatch%EF%BC%89%E5%92%8CBlock%20%E4%BD%BF%E7%94%A8-%E6%B5%85%E6%9E%90.resources/FE882AC2-384F-4A0B-B6B8-C1035FBA0CCB.gif">
 <meta name="twitter:creator" content="@XiaoheiSpring">
 <link rel="publisher" href="109318125124422212783">
 
@@ -75,7 +75,7 @@
 					
 						<li><a href="/about">关于</a></li>
 					
-					<li><a href="http://clockcoder.com">副站</a></li>
+					<li><a target="_blank" rel="noopener" href="http://clockcoder.com">副站</a></li>
 					<li>
  					
 						<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
@@ -158,7 +158,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://clockcoder.com/2020/04/29/GCD%EF%BC%88Grand%20Central%20Dispatch%EF%BC%89%E5%92%8CBlock%20%E4%BD%BF%E7%94%A8-%E6%B5%85%E6%9E%90/" data-title="GCD（Grand Central Dispatch）和Block 使用-浅析 | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
+	  <div data-url="http://clockcoder.top/2020/04/29/GCD%EF%BC%88Grand%20Central%20Dispatch%EF%BC%89%E5%92%8CBlock%20%E4%BD%BF%E7%94%A8-%E6%B5%85%E6%9E%90/" data-title="GCD（Grand Central Dispatch）和Block 使用-浅析 | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -192,7 +192,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2020/04/29/GCD（Grand Central Dispatch）和Block 使用-浅析/" data-title="GCD（Grand Central Dispatch）和Block 使用-浅析" data-url="http://clockcoder.com/2020/04/29/GCD%EF%BC%88Grand%20Central%20Dispatch%EF%BC%89%E5%92%8CBlock%20%E4%BD%BF%E7%94%A8-%E6%B5%85%E6%9E%90/"></div>
+	<div class="ds-thread" data-thread-key="2020/04/29/GCD（Grand Central Dispatch）和Block 使用-浅析/" data-title="GCD（Grand Central Dispatch）和Block 使用-浅析" data-url="http://clockcoder.top/2020/04/29/GCD%EF%BC%88Grand%20Central%20Dispatch%EF%BC%89%E5%92%8CBlock%20%E4%BD%BF%E7%94%A8-%E6%B5%85%E6%9E%90/"></div>
 </section>
 
 
