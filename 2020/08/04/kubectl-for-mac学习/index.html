@@ -17,7 +17,7 @@
     <meta name="description" content="k8s学习（一）安装升级docker for desktop的mac版本到 https:&#x2F;&#x2F;kubernetes.io&#x2F;zh&#x2F;docs&#x2F;setup&#x2F;production-environment&#x2F;tools&#x2F;kubeadm&#x2F;install-kubeadm&#x2F; ** unbuntu环境安装 1. 使用kubeadm安装kubectlvim &#x2F;etc&#x2F;docker&#x2F;daemon.json  export">
 <meta property="og:type" content="article">
 <meta property="og:title" content="k8s学习（一）">
-<meta property="og:url" content="http://clockcoder.top/2020/08/04/kubectl-for-mac%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:url" content="http://blog.clockcoder.top/2020/08/04/kubectl-for-mac%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="小黑的技术博客">
 <meta property="og:description" content="k8s学习（一）安装升级docker for desktop的mac版本到 https:&#x2F;&#x2F;kubernetes.io&#x2F;zh&#x2F;docs&#x2F;setup&#x2F;production-environment&#x2F;tools&#x2F;kubeadm&#x2F;install-kubeadm&#x2F; ** unbuntu环境安装 1. 使用kubeadm安装kubectlvim &#x2F;etc&#x2F;docker&#x2F;daemon.json  export">
 <meta property="og:locale" content="zh_CN">
@@ -25,24 +25,24 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/huguiqi/hexoImg/image-20200728095523717.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/huguiqi/hexoImg/image-20200728094442332.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/huguiqi/hexoImg/image-20200728094649289.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1ghg8zvq7vlj30v40mctat.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlly1gh72ufomfej313806eq36.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlly1gh72zmdtxlj31iu0jy78a.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlly1gh735zqmvfj30p00ha0w0.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlly1gh737lazk1j30pw05c754.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlly1gh739x1uuoj31jw0l477s.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1gh7rx2v0xcj3112052gmj.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1gh7y6ptmuhj314806uta3.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1gh824eywjlj311m066my6.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1gh82b7aj16j31020digoi.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1gh83kmc3kbj30zc05kq3u.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1gh83d0xydej30sk044q3n.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1ghgy3vc7nlj31b806owfv.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1ghgy5zq2irj327y0ckgpa.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1ghgyjnaa31j31ic04sjsl.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1ghgymjatwoj30ku09m74j.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1ghgynnnq42j30yg04ogm9.png">
-<meta property="og:image" content="http://clockcoder.top/images/007S8ZIlgy1ghgyrlxaqwj30qc050dgq.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1ghg8zvq7vlj30v40mctat.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlly1gh72ufomfej313806eq36.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlly1gh72zmdtxlj31iu0jy78a.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlly1gh735zqmvfj30p00ha0w0.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlly1gh737lazk1j30pw05c754.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlly1gh739x1uuoj31jw0l477s.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1gh7rx2v0xcj3112052gmj.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1gh7y6ptmuhj314806uta3.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1gh824eywjlj311m066my6.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1gh82b7aj16j31020digoi.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1gh83kmc3kbj30zc05kq3u.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1gh83d0xydej30sk044q3n.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1ghgy3vc7nlj31b806owfv.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1ghgy5zq2irj327y0ckgpa.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1ghgyjnaa31j31ic04sjsl.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1ghgymjatwoj30ku09m74j.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1ghgynnnq42j30yg04ogm9.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/007S8ZIlgy1ghgyrlxaqwj30qc050dgq.png">
 <meta property="article:published_time" content="2020-08-04T03:13:00.000Z">
 <meta property="article:modified_time" content="2023-02-16T11:41:07.600Z">
 <meta property="article:author" content="sam">
@@ -592,7 +592,7 @@ kubectl delete deployment hello-node
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://clockcoder.top/2020/08/04/kubectl-for-mac%E5%AD%A6%E4%B9%A0/" data-title="k8s学习（一） | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
+	  <div data-url="http://blog.clockcoder.top/2020/08/04/kubectl-for-mac%E5%AD%A6%E4%B9%A0/" data-title="k8s学习（一） | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -626,7 +626,7 @@ kubectl delete deployment hello-node
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2020/08/04/kubectl-for-mac学习/" data-title="k8s学习（一）" data-url="http://clockcoder.top/2020/08/04/kubectl-for-mac%E5%AD%A6%E4%B9%A0/"></div>
+	<div class="ds-thread" data-thread-key="2020/08/04/kubectl-for-mac学习/" data-title="k8s学习（一）" data-url="http://blog.clockcoder.top/2020/08/04/kubectl-for-mac%E5%AD%A6%E4%B9%A0/"></div>
 </section>
 
 

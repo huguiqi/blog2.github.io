@@ -17,14 +17,14 @@
     <meta name="description" content="SpringBoot + Redis模拟秒杀抢单！(lettuce实现)本篇内容主要讲解的是redis分布式锁，这个在各大厂面试几乎都是必备的，下面结合模拟抢单的场景来使用她；本篇不涉及到的redis环境搭建，快速搭建个人测试环境，这里建议使用docker；本篇内容节点如下： 使用nx原生命令实现 原理  setnx 命令是redis的一条原生命令 大意为 set if not exists， 在">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringBoot + Redis：SpringBoot + Redis模拟秒杀抢单！(lettuce实现)">
-<meta property="og:url" content="http://clockcoder.top/2023/02/16/SpringBoot%20+%20Redis%E6%A8%A1%E6%8B%9F%E7%A7%92%E6%9D%80%E6%8A%A2%E5%8D%95%EF%BC%81(lettuce%E5%AE%9E%E7%8E%B0)/index.html">
+<meta property="og:url" content="http://blog.clockcoder.top/2023/02/16/SpringBoot%20+%20Redis%E6%A8%A1%E6%8B%9F%E7%A7%92%E6%9D%80%E6%8A%A2%E5%8D%95%EF%BC%81(lettuce%E5%AE%9E%E7%8E%B0)/index.html">
 <meta property="og:site_name" content="小黑的技术博客">
 <meta property="og:description" content="SpringBoot + Redis模拟秒杀抢单！(lettuce实现)本篇内容主要讲解的是redis分布式锁，这个在各大厂面试几乎都是必备的，下面结合模拟抢单的场景来使用她；本篇不涉及到的redis环境搭建，快速搭建个人测试环境，这里建议使用docker；本篇内容节点如下： 使用nx原生命令实现 原理  setnx 命令是redis的一条原生命令 大意为 set if not exists， 在">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://clockcoder.top/images/e6c9d24egy1gzga4ypkj3j21700mwq6i.png">
-<meta property="og:image" content="http://clockcoder.top/images/008i3skNly1gz68prkhjwj30il055q3m.png">
-<meta property="og:image" content="http://clockcoder.top/images/008i3skNly1gz68sbgcmcj30je0c7aba.png">
-<meta property="og:image" content="http://clockcoder.top/images/008i3skNgy1gz68tch07vj30jl01qmxc.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/e6c9d24egy1gzga4ypkj3j21700mwq6i.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/008i3skNly1gz68prkhjwj30il055q3m.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/008i3skNly1gz68sbgcmcj30je0c7aba.png">
+<meta property="og:image" content="http://blog.clockcoder.top/images/008i3skNgy1gz68tch07vj30jl01qmxc.png">
 <meta property="article:published_time" content="2023-02-16T11:41:07.233Z">
 <meta property="article:modified_time" content="2023-02-16T11:41:07.233Z">
 <meta property="article:author" content="sam">
@@ -32,7 +32,7 @@
 <meta property="article:tag" content="分布式锁">
 <meta property="article:tag" content="lettuce">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://clockcoder.top/images/e6c9d24egy1gzga4ypkj3j21700mwq6i.png">
+<meta name="twitter:image" content="http://blog.clockcoder.top/images/e6c9d24egy1gzga4ypkj3j21700mwq6i.png">
 <meta name="twitter:creator" content="@XiaoheiSpring">
 <link rel="publisher" href="109318125124422212783">
 
@@ -408,7 +408,7 @@ public int delnx(@PathVariable String key, @PathVariable String val) &#123;
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://clockcoder.top/2023/02/16/SpringBoot%20+%20Redis%E6%A8%A1%E6%8B%9F%E7%A7%92%E6%9D%80%E6%8A%A2%E5%8D%95%EF%BC%81(lettuce%E5%AE%9E%E7%8E%B0)/" data-title="SpringBoot + Redis：SpringBoot + Redis模拟秒杀抢单！(lettuce实现) | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
+	  <div data-url="http://blog.clockcoder.top/2023/02/16/SpringBoot%20+%20Redis%E6%A8%A1%E6%8B%9F%E7%A7%92%E6%9D%80%E6%8A%A2%E5%8D%95%EF%BC%81(lettuce%E5%AE%9E%E7%8E%B0)/" data-title="SpringBoot + Redis：SpringBoot + Redis模拟秒杀抢单！(lettuce实现) | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -442,7 +442,7 @@ public int delnx(@PathVariable String key, @PathVariable String val) &#123;
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2023/02/16/SpringBoot + Redis模拟秒杀抢单！(lettuce实现)/" data-title="SpringBoot + Redis：SpringBoot + Redis模拟秒杀抢单！(lettuce实现)" data-url="http://clockcoder.top/2023/02/16/SpringBoot%20+%20Redis%E6%A8%A1%E6%8B%9F%E7%A7%92%E6%9D%80%E6%8A%A2%E5%8D%95%EF%BC%81(lettuce%E5%AE%9E%E7%8E%B0)/"></div>
+	<div class="ds-thread" data-thread-key="2023/02/16/SpringBoot + Redis模拟秒杀抢单！(lettuce实现)/" data-title="SpringBoot + Redis：SpringBoot + Redis模拟秒杀抢单！(lettuce实现)" data-url="http://blog.clockcoder.top/2023/02/16/SpringBoot%20+%20Redis%E6%A8%A1%E6%8B%9F%E7%A7%92%E6%9D%80%E6%8A%A2%E5%8D%95%EF%BC%81(lettuce%E5%AE%9E%E7%8E%B0)/"></div>
 </section>
 
 

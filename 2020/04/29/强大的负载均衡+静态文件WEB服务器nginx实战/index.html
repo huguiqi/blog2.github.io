@@ -17,21 +17,21 @@
     <meta name="description" content="强大的负载均衡+静态文件WEB服务器nginx实战强大的负载均衡+静态文件WEB服务器nginx实战   \     \     &amp;nbsp; &amp;nbsp;&amp;nbsp;   模块依赖： 1 gzip支持，需要zlib http:&#x2F;&#x2F;www.zlib.net&#x2F; 下载最新版即可 2 rewrite module requires pcre library http:&#x2F;&#x2F;www.pcre.org&#x2F;下载最">
 <meta property="og:type" content="article">
 <meta property="og:title" content="强大的负载均衡+静态文件WEB服务器nginx实战">
-<meta property="og:url" content="http://clockcoder.top/2020/04/29/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98/index.html">
+<meta property="og:url" content="http://blog.clockcoder.top/2020/04/29/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98/index.html">
 <meta property="og:site_name" content="小黑的技术博客">
 <meta property="og:description" content="强大的负载均衡+静态文件WEB服务器nginx实战强大的负载均衡+静态文件WEB服务器nginx实战   \     \     &amp;nbsp; &amp;nbsp;&amp;nbsp;   模块依赖： 1 gzip支持，需要zlib http:&#x2F;&#x2F;www.zlib.net&#x2F; 下载最新版即可 2 rewrite module requires pcre library http:&#x2F;&#x2F;www.pcre.org&#x2F;下载最">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://clockcoder.top/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98.resources/1525CA5E-C477-435A-AA10-32950B255404.png">
-<meta property="og:image" content="http://clockcoder.top/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98.resources/1525CA5E-C477-435A-AA10-32950B255404.png">
-<meta property="og:image" content="http://clockcoder.top/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98.resources/1525CA5E-C477-435A-AA10-32950B255404.png">
-<meta property="og:image" content="http://clockcoder.top/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98.resources/1525CA5E-C477-435A-AA10-32950B255404.png">
-<meta property="og:image" content="http://clockcoder.top/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98.resources/1525CA5E-C477-435A-AA10-32950B255404.png">
+<meta property="og:image" content="http://blog.clockcoder.top/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98.resources/1525CA5E-C477-435A-AA10-32950B255404.png">
+<meta property="og:image" content="http://blog.clockcoder.top/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98.resources/1525CA5E-C477-435A-AA10-32950B255404.png">
+<meta property="og:image" content="http://blog.clockcoder.top/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98.resources/1525CA5E-C477-435A-AA10-32950B255404.png">
+<meta property="og:image" content="http://blog.clockcoder.top/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98.resources/1525CA5E-C477-435A-AA10-32950B255404.png">
+<meta property="og:image" content="http://blog.clockcoder.top/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98.resources/1525CA5E-C477-435A-AA10-32950B255404.png">
 <meta property="article:published_time" content="2020-04-28T16:00:00.000Z">
 <meta property="article:modified_time" content="2023-02-16T11:41:08.203Z">
 <meta property="article:author" content="sam">
 <meta property="article:tag" content="从印象笔记导入">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://clockcoder.top/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98.resources/1525CA5E-C477-435A-AA10-32950B255404.png">
+<meta name="twitter:image" content="http://blog.clockcoder.top/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98.resources/1525CA5E-C477-435A-AA10-32950B255404.png">
 <meta name="twitter:creator" content="@XiaoheiSpring">
 <link rel="publisher" href="109318125124422212783">
 
@@ -173,7 +173,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://clockcoder.top/2020/04/29/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98/" data-title="强大的负载均衡+静态文件WEB服务器nginx实战 | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
+	  <div data-url="http://blog.clockcoder.top/2020/04/29/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98/" data-title="强大的负载均衡+静态文件WEB服务器nginx实战 | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -207,7 +207,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2020/04/29/强大的负载均衡+静态文件WEB服务器nginx实战/" data-title="强大的负载均衡+静态文件WEB服务器nginx实战" data-url="http://clockcoder.top/2020/04/29/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98/"></div>
+	<div class="ds-thread" data-thread-key="2020/04/29/强大的负载均衡+静态文件WEB服务器nginx实战/" data-title="强大的负载均衡+静态文件WEB服务器nginx实战" data-url="http://blog.clockcoder.top/2020/04/29/%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1+%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6WEB%E6%9C%8D%E5%8A%A1%E5%99%A8nginx%E5%AE%9E%E6%88%98/"></div>
 </section>
 
 
