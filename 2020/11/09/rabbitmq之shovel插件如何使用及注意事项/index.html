@@ -17,19 +17,19 @@
     <meta name="description" content="rabbitmq之shovel插件如何使用及注意事项  此篇文章本来发表在我厂内部文档库中，由于本人年后准备异动，现将此文转出此本人私有站点中   Shovel是分布式消息传递工具包中的一种极简但灵活的工具，可以容纳许多用例。 以下是官网列举的四项功能：  可以应对不同的平台进行消息传递，藕合性低。 可以在RabbitMQ的不同版本上运行，兼容性强。 可使用不同的消息传递产品或协议。 可使用不同的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="rabbitmq之shovel插件如何使用及注意事项">
-<meta property="og:url" content="http://blog.clockcoder.top/2020/11/09/rabbitmq%E4%B9%8Bshovel%E6%8F%92%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/index.html">
+<meta property="og:url" content="http://clockcoder.top/2020/11/09/rabbitmq%E4%B9%8Bshovel%E6%8F%92%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/index.html">
 <meta property="og:site_name" content="小黑的技术博客">
 <meta property="og:description" content="rabbitmq之shovel插件如何使用及注意事项  此篇文章本来发表在我厂内部文档库中，由于本人年后准备异动，现将此文转出此本人私有站点中   Shovel是分布式消息传递工具包中的一种极简但灵活的工具，可以容纳许多用例。 以下是官网列举的四项功能：  可以应对不同的平台进行消息传递，藕合性低。 可以在RabbitMQ的不同版本上运行，兼容性强。 可使用不同的消息传递产品或协议。 可使用不同的">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://blog.clockcoder.top/images/008i3skNly1gyazy29f60j31sa0u0di2.png">
-<meta property="og:image" content="http://blog.clockcoder.top/images/008i3skNly1gyazyywrkfj31mc0u0wh4.png">
+<meta property="og:image" content="http://clockcoder.top/images/008i3skNly1gyazy29f60j31sa0u0di2.png">
+<meta property="og:image" content="http://clockcoder.top/images/008i3skNly1gyazyywrkfj31mc0u0wh4.png">
 <meta property="article:published_time" content="2020-11-09T09:06:00.000Z">
 <meta property="article:modified_time" content="2023-02-16T11:41:07.762Z">
 <meta property="article:author" content="sam">
 <meta property="article:tag" content="rabbitMQ">
 <meta property="article:tag" content="shovel">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://blog.clockcoder.top/images/008i3skNly1gyazy29f60j31sa0u0di2.png">
+<meta name="twitter:image" content="http://clockcoder.top/images/008i3skNly1gyazy29f60j31sa0u0di2.png">
 <meta name="twitter:creator" content="@XiaoheiSpring">
 <link rel="publisher" href="109318125124422212783">
 
@@ -77,7 +77,7 @@
 					
 						<li><a href="/about">关于</a></li>
 					
-					<li><a target="_blank" rel="noopener" href="http://clockcoder.com">副站</a></li>
+					<li><a target="_blank" rel="noopener" href="http://blog.clockcoder.top">副站</a></li>
 					<li>
  					
 						<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
@@ -213,7 +213,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://blog.clockcoder.top/2020/11/09/rabbitmq%E4%B9%8Bshovel%E6%8F%92%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" data-title="rabbitmq之shovel插件如何使用及注意事项 | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
+	  <div data-url="http://clockcoder.top/2020/11/09/rabbitmq%E4%B9%8Bshovel%E6%8F%92%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" data-title="rabbitmq之shovel插件如何使用及注意事项 | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -247,7 +247,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2020/11/09/rabbitmq之shovel插件如何使用及注意事项/" data-title="rabbitmq之shovel插件如何使用及注意事项" data-url="http://blog.clockcoder.top/2020/11/09/rabbitmq%E4%B9%8Bshovel%E6%8F%92%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"></div>
+	<div class="ds-thread" data-thread-key="2020/11/09/rabbitmq之shovel插件如何使用及注意事项/" data-title="rabbitmq之shovel插件如何使用及注意事项" data-url="http://clockcoder.top/2020/11/09/rabbitmq%E4%B9%8Bshovel%E6%8F%92%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"></div>
 </section>
 
 

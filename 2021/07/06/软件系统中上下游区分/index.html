@@ -17,19 +17,19 @@
     <meta name="description" content="前言在我们日常工作当中，经常会听到这些词汇，与上游xx对接、升级要保证下游xx兼容性，据我了解啊，很多人还搞不起什么是上游、什么是下游，或者脑袋里很模糊，不会去判断这些。那么搞清楚这些概念，对于我们的软件设计还是很有必要的，为了搞清楚，那么下面我先举几个例子来介绍下：例如： 我们的上游的xx系统今天down掉了，导致我们一部分业务没有闭环，需要晚些时候去补偿。 我们提供的接口被调用频率过高，爆掉了">
 <meta property="og:type" content="article">
 <meta property="og:title" content="软件系统中上下游区分">
-<meta property="og:url" content="http://blog.clockcoder.top/2021/07/06/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%8A%E4%B8%8B%E6%B8%B8%E5%8C%BA%E5%88%86/index.html">
+<meta property="og:url" content="http://clockcoder.top/2021/07/06/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%8A%E4%B8%8B%E6%B8%B8%E5%8C%BA%E5%88%86/index.html">
 <meta property="og:site_name" content="小黑的技术博客">
 <meta property="og:description" content="前言在我们日常工作当中，经常会听到这些词汇，与上游xx对接、升级要保证下游xx兼容性，据我了解啊，很多人还搞不起什么是上游、什么是下游，或者脑袋里很模糊，不会去判断这些。那么搞清楚这些概念，对于我们的软件设计还是很有必要的，为了搞清楚，那么下面我先举几个例子来介绍下：例如： 我们的上游的xx系统今天down掉了，导致我们一部分业务没有闭环，需要晚些时候去补偿。 我们提供的接口被调用频率过高，爆掉了">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://blog.clockcoder.top/images/008i3skNly1gs7nl1e84mj30gl0j5wry.png">
-<meta property="og:image" content="http://blog.clockcoder.top/images/008i3skNly1gs7nja20zuj30pr0aiq62.png">
+<meta property="og:image" content="http://clockcoder.top/images/008i3skNly1gs7nl1e84mj30gl0j5wry.png">
+<meta property="og:image" content="http://clockcoder.top/images/008i3skNly1gs7nja20zuj30pr0aiq62.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20201228111843855.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FidTkzNTAwOTA2Ng==,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2021-07-06T15:24:56.000Z">
 <meta property="article:modified_time" content="2023-02-16T11:41:08.284Z">
 <meta property="article:author" content="sam">
 <meta property="article:tag" content="胡小黑,架构师,资深软件工程师,object-c,swift,java,node,小黑,技术,大牛,阿里巴巴,腾讯,旅游">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://blog.clockcoder.top/images/008i3skNly1gs7nl1e84mj30gl0j5wry.png">
+<meta name="twitter:image" content="http://clockcoder.top/images/008i3skNly1gs7nl1e84mj30gl0j5wry.png">
 <meta name="twitter:creator" content="@XiaoheiSpring">
 <link rel="publisher" href="109318125124422212783">
 
@@ -77,7 +77,7 @@
 					
 						<li><a href="/about">关于</a></li>
 					
-					<li><a target="_blank" rel="noopener" href="http://clockcoder.com">副站</a></li>
+					<li><a target="_blank" rel="noopener" href="http://blog.clockcoder.top">副站</a></li>
 					<li>
  					
 						<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
@@ -156,7 +156,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://blog.clockcoder.top/2021/07/06/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%8A%E4%B8%8B%E6%B8%B8%E5%8C%BA%E5%88%86/" data-title="软件系统中上下游区分 | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
+	  <div data-url="http://clockcoder.top/2021/07/06/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%8A%E4%B8%8B%E6%B8%B8%E5%8C%BA%E5%88%86/" data-title="软件系统中上下游区分 | 小黑的技术博客" data-tsina="1601653200" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -190,7 +190,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2021/07/06/软件系统中上下游区分/" data-title="软件系统中上下游区分" data-url="http://blog.clockcoder.top/2021/07/06/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%8A%E4%B8%8B%E6%B8%B8%E5%8C%BA%E5%88%86/"></div>
+	<div class="ds-thread" data-thread-key="2021/07/06/软件系统中上下游区分/" data-title="软件系统中上下游区分" data-url="http://clockcoder.top/2021/07/06/%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%B8%8A%E4%B8%8B%E6%B8%B8%E5%8C%BA%E5%88%86/"></div>
 </section>
 
 
