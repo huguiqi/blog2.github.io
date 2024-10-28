@@ -14,15 +14,15 @@
     
     <meta name="baidu-site-verification" content="zBj0BDqjSV" />
     
-    <meta name="description" content="redis有用命令行记录–模糊匹配key，再全部删除  redis-cli -a lilishop --scan --pattern &#39;&amp;#123;VERIFICATION_IMAGE&amp;#125;*&#39; | xargs redis-cli -a lilishop del 这行命令的工作流程如下： redis-cli –scan –pattern ‘{VERIFICATION_IMAGE}*’：使用">
+    <meta name="description" content="redis有用命令行记录–模糊匹配key，再全部删除 redis-cli -a lilishop --scan --pattern &#39;&amp;#123;VERIFICATION_IMAGE&amp;#125;*&#39; | xargs redis-cli -a lilishop del &#96;&#96;&#96;  这行命令的工作流程如下：  redis-cli --scan --pattern &#39;&amp;#123;VERIFICATION_">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redis有用命令行记录">
 <meta property="og:url" content="http://clockcoder.top/2024/10/29/redis%E6%9C%89%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="小黑的技术博客">
-<meta property="og:description" content="redis有用命令行记录–模糊匹配key，再全部删除  redis-cli -a lilishop --scan --pattern &#39;&amp;#123;VERIFICATION_IMAGE&amp;#125;*&#39; | xargs redis-cli -a lilishop del 这行命令的工作流程如下： redis-cli –scan –pattern ‘{VERIFICATION_IMAGE}*’：使用">
+<meta property="og:description" content="redis有用命令行记录–模糊匹配key，再全部删除 redis-cli -a lilishop --scan --pattern &#39;&amp;#123;VERIFICATION_IMAGE&amp;#125;*&#39; | xargs redis-cli -a lilishop del &#96;&#96;&#96;  这行命令的工作流程如下：  redis-cli --scan --pattern &#39;&amp;#123;VERIFICATION_">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-28T16:16:00.000Z">
-<meta property="article:modified_time" content="2024-10-28T16:19:22.756Z">
+<meta property="article:modified_time" content="2024-10-28T16:54:01.292Z">
 <meta property="article:author" content="sam">
 <meta property="article:tag" content="redis">
 <meta name="twitter:card" content="summary">
@@ -115,14 +115,33 @@
 		</div>
 		
 		<h1 id="redis有用命令行记录"><a title="redis有用命令行记录" class="headerlink" href="#redis有用命令行记录"></a>redis有用命令行记录</h1><p>–模糊匹配key，再全部删除</p>
-<p><code> redis-cli -a lilishop --scan --pattern '&#123;VERIFICATION_IMAGE&#125;*' | xargs redis-cli -a lilishop del</code></p>
-<p>这行命令的工作流程如下：</p>
-<p>redis-cli –scan –pattern ‘{VERIFICATION_IMAGE}*’：使用 SCAN 命令匹配所有以 {VERIFICATION_IMAGE} 开头的键。<br>xargs redis-cli del：将 SCAN 命令的结果（即匹配的键）传递给 DEL 命令进行删除。<br>请注意，这行命令假设你的Redis服务器默认运行在本地主机（localhost）和默认端口（6379）上，并且没有设置密码保护。如果你的Redis服务器配置有所不同，或者需要密码认证，你需要相应地调整命令。</p>
-<p>如果Redis服务器需要密码，可以使用 -a 选项提供密码：</p>
-<p>bash<br>redis-cli -a yourpassword –scan –pattern ‘{VERIFICATION_IMAGE}*’ | xargs redis-cli -a yourpassword del<br>替换 yourpassword 为你的Redis服务器的实际密码。</p>
-<p>如果Redis服务器运行在不同的主机或端口上，可以使用 -h 和 -p 选项指定主机和端口：</p>
-<p>bash<br>redis-cli -h yourhost -p yourport -a yourpassword –scan –pattern ‘{VERIFICATION_IMAGE}*’ | xargs redis-cli -h yourhost -p yourport -a yourpassword del<br>替换 yourhost、yourport 和 yourpassword 为你的Redis服务器的实际主机名、端口和密码。</p>
-<p>请谨慎使用这行命令，因为它会删除所有匹配的键。在执行删除操作之前，请确保已经备份了所有重要数据。</p>
+<pre><code>redis-cli -a lilishop --scan --pattern '&#123;VERIFICATION_IMAGE&#125;*' | xargs redis-cli -a lilishop del ```
+
+这行命令的工作流程如下：
+
+redis-cli --scan --pattern '&#123;VERIFICATION_IMAGE&#125;*'：使用 SCAN 命令匹配所有以 &#123;VERIFICATION_IMAGE&#125; 开头的键。
+xargs redis-cli del：将 SCAN 命令的结果（即匹配的键）传递给 DEL 命令进行删除。
+请注意，这行命令假设你的Redis服务器默认运行在本地主机（localhost）和默认端口（6379）上，并且没有设置密码保护。如果你的Redis服务器配置有所不同，或者需要密码认证，你需要相应地调整命令。
+
+如果Redis服务器需要密码，可以使用 -a 选项提供密码：
+
+bash
+redis-cli -a yourpassword --scan --pattern '&#123;VERIFICATION_IMAGE&#125;*' | xargs redis-cli -a yourpassword del
+替换 yourpassword 为你的Redis服务器的实际密码。
+
+如果Redis服务器运行在不同的主机或端口上，可以使用 -h 和 -p 选项指定主机和端口：
+
+bash
+redis-cli -h yourhost -p yourport -a yourpassword --scan --pattern '&#123;VERIFICATION_IMAGE&#125;*' | xargs redis-cli -h yourhost -p yourport -a yourpassword del
+替换 yourhost、yourport 和 yourpassword 为你的Redis服务器的实际主机名、端口和密码。
+
+请谨慎使用这行命令，因为它会删除所有匹配的键。在执行删除操作之前，请确保已经备份了所有重要数据。
+
+
+--删除0-1000遍历的key
+</code></pre>
+<p>redis-cli -a lilishop –scan 0  1000 | xargs redis-cli -a lilishop del</p>
+<p>```</p>
   
 	</div>
 		<footer class="article-footer clearfix">
