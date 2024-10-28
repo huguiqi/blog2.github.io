@@ -22,7 +22,7 @@
 <meta property="og:description" content="redis有用命令行记录–模糊匹配key，再全部删除 redis-cli -a lilishop --scan --pattern &#39;&amp;#123;VERIFICATION_IMAGE&amp;#125;*&#39; | xargs redis-cli -a lilishop del &#96;&#96;&#96;  这行命令的工作流程如下：  redis-cli --scan --pattern &#39;&amp;#123;VERIFICATION_">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-28T16:16:00.000Z">
-<meta property="article:modified_time" content="2024-10-28T16:54:01.292Z">
+<meta property="article:modified_time" content="2024-10-28T16:56:13.399Z">
 <meta property="article:author" content="sam">
 <meta property="article:tag" content="redis">
 <meta name="twitter:card" content="summary">
@@ -140,8 +140,7 @@ redis-cli -h yourhost -p yourport -a yourpassword --scan --pattern '&#123;VERIFI
 
 --删除0-1000遍历的key
 </code></pre>
-<p>redis-cli -a lilishop –scan 0  1000 | xargs redis-cli -a lilishop del</p>
-<p>```</p>
+<p>redis-cli -a lilishop –scan 0  1000 | xargs redis-cli -a lilishop del<br>```</p>
   
 	</div>
 		<footer class="article-footer clearfix">
